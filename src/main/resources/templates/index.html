@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- thymeleaf-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Manage</title>
+</head>
+<body>
+<div id="table">
+    <table>
+        <caption>人员信息</caption>
+        <tr>
+            <th>Name</th>
+            <th>PassWord</th>
+            <th>age</th>
+        </tr>
+
+        <tr th:each="item: ${list}">
+             <td th:text="${{item.name}}">还没有人员信息哟</td>
+            <td th:text="${{tiem.password}}">密码</td>
+        </tr>
+    </table>
+
+</div>
+
+
+</body>
+</html>

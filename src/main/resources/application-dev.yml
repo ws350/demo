@@ -1,0 +1,52 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: SpringbootApplication
+  datasource:
+    username: root
+    password: Ws@vansn
+    url: jdbc:mysql://localhost:3306/tuling?serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 192.168.25.128
+    port: 6379
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 10
+        max-wait: -1
+        min-idle: 0
+    timeout: 1000
+
+
+  #showSql
+  logging:
+    level:
+      com:
+        example:
+          mapper : debug
+
+  data:
+    elasticsearch:
+
+      #cluster-name: myes
+      #cluster-nodes: 127.0.0.1:9300
+      #cluster-nodes: hadoop137:9300,hadoop138:9300,hadoop139:9300
+
+
+## 该配置节点为独立的节点，容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity
+
+
+
+rabbitmq:
+  host: 81.71.140.7
+  port: 5672
+  username: bq123
+  password: bq123
+  virtual-host: /baiqi

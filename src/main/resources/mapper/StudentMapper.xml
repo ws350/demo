@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 这里填写对应的mapper文件所在的路径 -->
+<mapper namespace="com.example.dao.StudentMapper"    >
+    <!-- 填写数据库里实例Person对应的表的表名 -->
+    <!-- 这里是作为一个变量使用 -->
+
+
+    <!-- id属性填写mapper文件里的函数名称 xxType是参数或是结果的类型根据情况填写 -->
+
+    <!-- 增 -->
+    <insert id="insertStu" parameterType="com.example.entity.Student">
+        INSERT  INTO t_student (name,sex,age)
+        VALUES (#{student.name},#{student.sex}, #{student.age})
+    </insert>
+
+
+</mapper>
